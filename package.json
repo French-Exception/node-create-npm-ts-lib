@@ -1,0 +1,26 @@
+{
+  "name": "@frenchex/create-npm-ts-lib",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "bin": "src/index.js",
+  "scripts": {
+    "release.patch": "release-it --path --ci",
+    "release.minor": "release-it --minor --ci",
+    "release.major": "release-it --major --ci",
+    "dev": "nodemon src/index.js",
+    "test": "mocha -r ts-node/register  test/index.js"
+  },
+  "keywords": [],
+  "author": "Stéphane ERARD <serard06@protonmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^12.12.14",
+    "chai": "^4.2.0",
+    "cz-conventional-commit": "^1.0.6",
+    "mocha": "^6.2.2",
+    "nodemon": "^2.0.1",
+    "typescript": "^3.7.2"
+  }
+}
