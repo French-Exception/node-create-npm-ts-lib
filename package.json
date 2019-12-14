@@ -1,9 +1,12 @@
 {
   "name": "@frenchex/create-npm-ts-lib",
-  "version": "0.0.1",
-  "description": "",
-  "main": "index.js",
-  "bin": "src/index.js",
+  "version": "0.0.2",
+  "description": "A simple TypeScript & Git Flow NPM Initializer",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "scripts": {
     "release.patch": "release-it --path --ci",
     "release.minor": "release-it --minor --ci",
@@ -13,14 +16,19 @@
   },
   "keywords": [],
   "author": "Stéphane ERARD <serard06@protonmail.com>",
-  "license": "ISC",
+  "license": "LICENSE",
+  "dependencies": {
+    "@frenchex/create-npm-lib-lib": "^0.0.1",
+    "@log4js-node/log4js-api": "^1.0.2"
+  },
   "devDependencies": {
+    "@types/chai": "^4.2.7",
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.12.14",
     "chai": "^4.2.0",
-    "cz-conventional-commit": "^1.0.6",
     "mocha": "^6.2.2",
-    "nodemon": "^2.0.1",
-    "typescript": "^3.7.2"
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.5.4",
+    "typescript": "^3.7.3"
   }
 }

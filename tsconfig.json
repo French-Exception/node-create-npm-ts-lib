@@ -12,7 +12,10 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "moduleResolution": "node",
-    "lib": ["es5", "dom"],
+    "lib": [
+      "es5",
+      "dom"
+    ],
     "baseUrl": "./",
     "typeRoots": [
       "node_modules/@types"
@@ -21,7 +24,9 @@
       "node"
     ],
     "paths": {
-      "src/*": ["src/*"]
+      "src/*": [
+        "src/*"
+      ]
     }
   },
   "exclude": [
