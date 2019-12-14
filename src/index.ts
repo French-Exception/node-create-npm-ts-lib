@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import * as lib from "@frenchex/create-npm-lib-lib";
 import * as path from "path";
 
@@ -15,6 +17,10 @@ const npmCreate = new lib.NpmCreate(logger);
         packageJson: {
             main: 'src/index.js',
             homepage: "",
+            license: "",
+            publishConfig: {
+                "access": "public"
+            },
             repository: {
                 type: "git",
                 url: ""
@@ -23,9 +29,6 @@ const npmCreate = new lib.NpmCreate(logger);
                 {name: 'dev', script: 'tsc -w'},
                 {name: 'build', script: 'tsc'},
             ],
-            publishConfig: {
-                "access": true
-            },
             devDependencies: [
                 {name: 'typescript', version: {prefix: '*'}},
                 {name: 'ts-node', version: {prefix: '*'}},

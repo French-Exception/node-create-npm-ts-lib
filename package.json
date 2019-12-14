@@ -1,24 +1,41 @@
 {
   "name": "@frenchex/create-npm-ts-lib",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "A simple TypeScript & Git Flow NPM Initializer",
+  "bugs": {
+    "url": "https://github.com/French-Exception/create-npm-ts-lib/issues"
+  },
+  "homepage": "https://github.com/French-Exception/create-npm-ts-lib#readme",
   "main": "src/index.js",
-  "repository": {
-    "type": "git",
-    "url": ""
+  "bin": {
+    "create-npm-ts-lib": "./src/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "scripts": {
-    "release.patch": "release-it --path --ci",
-    "release.minor": "release-it --minor --ci",
-    "release.major": "release-it --major --ci",
-    "dev": "nodemon src/index.js",
-    "test": "mocha -r ts-node/register  test/index.js"
+    "dev": "tsc -w",
+    "build": "tsc",
+    "test.unit": "mocha -r ts-node/register",
+    "bump.patch": "release-it patch --ci",
+    "bump.minor": "release-it minor --ci",
+    "bump.major": "release-it major --ci",
+    "release": "npm publish"
   },
-  "keywords": [],
+  "keywords": [
+    "init",
+    "npm",
+    "typescript",
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:French-Exception/create-npm-ts-lib.git"
+  },
   "author": "Stéphane ERARD <serard06@protonmail.com>",
   "license": "LICENSE",
   "dependencies": {
-    "@frenchex/create-npm-lib-lib": "^0.0.1",
+    "@frenchex/create-npm-lib-lib": "^0.0.2",
     "@log4js-node/log4js-api": "^1.0.2"
   },
   "devDependencies": {
@@ -30,5 +47,11 @@
     "nodemon": "^2.0.2",
     "ts-node": "^8.5.4",
     "typescript": "^3.7.3"
-  }
+  },
+  "directories": {
+    "test": "tests"
+  },
+  "files": [
+    "src/*.js"
+  ]
 }

@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const lib = require("@frenchex/create-npm-lib-lib");
@@ -14,6 +15,10 @@ const npmCreate = new lib.NpmCreate(logger);
         packageJson: {
             main: 'src/index.js',
             homepage: "",
+            license: "",
+            publishConfig: {
+                "access": "public"
+            },
             repository: {
                 type: "git",
                 url: ""
@@ -22,9 +27,6 @@ const npmCreate = new lib.NpmCreate(logger);
                 { name: 'dev', script: 'tsc -w' },
                 { name: 'build', script: 'tsc' },
             ],
-            publishConfig: {
-                "access": true
-            },
             devDependencies: [
                 { name: 'typescript', version: { prefix: '*' } },
                 { name: 'ts-node', version: { prefix: '*' } },
