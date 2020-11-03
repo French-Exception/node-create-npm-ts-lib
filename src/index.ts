@@ -26,21 +26,21 @@ const npmCreate = new lib.NpmCreate(logger);
                 url: ""
             },
             scripts: [
-                {name: 'dev', script: 'tsc -w'},
-                {name: 'build', script: 'tsc'},
+                { name: 'dev', script: 'tsc -w' },
+                { name: 'build', script: 'tsc' },
             ],
             devDependencies: [
-                {name: 'typescript', version: {prefix: '*'}},
-                {name: 'ts-node', version: {prefix: '*'}},
-                {scope: 'types', name: 'node', version: {prefix: '*'}},
-                {scope: 'types', name: 'mocha', version: {prefix: '*'}},
-                {scope: 'types', name: 'chai', version: {prefix: '*'}},
-                {name: 'mocha', version: {prefix: '*'}},
-                {name: 'chai', version: {prefix: '*'}},
-                {name: 'release-it', version: {prefix: '*'}},
+                { name: 'typescript', version: { prefix: '*' } },
+                { name: 'ts-node', version: { prefix: '*' } },
+                { scope: 'types', name: 'node', version: { prefix: '*' } },
+                { scope: 'types', name: 'mocha', version: { prefix: '*' } },
+                { scope: 'types', name: 'chai', version: { prefix: '*' } },
+                { name: 'mocha', version: { prefix: '*' } },
+                { name: 'chai', version: { prefix: '*' } },
+                { name: 'release-it', version: { prefix: '*' } },
             ]
         },
         scope: process.env.scope || path.basename(path.join(process.cwd(), '..')),
-        version: {major: 0, minor: 0, patch: 1}
+        version: { major: 0, minor: 0, patch: 1 }
     });
 })();
